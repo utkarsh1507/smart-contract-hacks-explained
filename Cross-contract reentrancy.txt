@@ -1,0 +1,21 @@
+Cross-contract reentrancy
+
+It happens when two or more contracts are involved in a reentrancy attack. Instead of re-entering the same contract (same-function or cross-function), the attacker exploits a call chain that jumps between different contracts.
+
+How it works:
+
+Contract A calls an external contract (e.g., sending ETH, calling a token, interacting with another protocol).
+
+That external contract (attacker-controlled or vulnerable) makes a callback into Contract B.
+
+Contract B, directly or indirectly, calls back into Contract A before state changes in A are finalized.
+
+Mitigations:
+
+Checks-Effects-Interactions: Always update state before external calls.
+
+ReentrancyGuard across critical functions.
+
+Use pull over push for transfers.
+
+Careful with composability — when designing protocols that rely on others (like DeFi lego).
