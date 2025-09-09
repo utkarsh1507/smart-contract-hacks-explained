@@ -1,0 +1,1 @@
+A cross-functional reentrancy attack is a type of reentrancy vulnerability in smart contracts where the attacker doesn’t exploit the same function being reentered, but instead calls back into a different function of the same contract (or another vulnerable contract) before the first function finishes execution
