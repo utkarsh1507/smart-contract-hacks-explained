@@ -25,7 +25,7 @@ contract VulnerableEthHandling {
 
     // Withdraw Ether (vulnerable)
     function withdraw(uint256 amount) public {
-        require(balances[msg.sender] >= amount, "Not enough balance");
+        require(balances[msg.sender] >= amount, "Not enough balance");  
 
         // Sending Ether without checking return value
         (bool success, ) = msg.sender.call{value: amount}("");
