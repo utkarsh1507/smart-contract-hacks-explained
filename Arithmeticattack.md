@@ -11,7 +11,7 @@
 
     ```solidity
     uint8 x = 255;     
-    x = x + 1; // x becomes 0
+    x = x + 1; // x becomes 0  
     ```
   * **Underflow**: if result < `0`, it wraps around to the maximum value.
 
