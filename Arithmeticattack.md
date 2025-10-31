@@ -10,7 +10,7 @@
   * **Overflow**: if result > `2^256 - 1`, it wraps back to `0`.
 
     ```solidity
-    uint8 x = 255;   
+    uint8 x = 255;     
     x = x + 1; // x becomes 0
     ```
   * **Underflow**: if result < `0`, it wraps around to the maximum value.
