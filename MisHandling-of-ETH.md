@@ -1,4 +1,3 @@
-   
 
 # Mishandling of ETH Vulnerability
 
